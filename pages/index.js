@@ -2,8 +2,10 @@ import React, { useState } from "react";
 import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
 import { GoogleAuthProvider, signInWithPopup } from "firebase/auth";
 import auth from "../firebaseConfig";
+import { useRouter } from "next/router";
 
 const Signup = () => {
+  const router = useRouter();
   const [showEmailInputs, setShowEmailInputs] = useState(false);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -15,6 +17,7 @@ const Signup = () => {
         // Signed in successfully, get user data
         const user = result.user;
         console.log(user);
+        router.push(`/home`);
       })
       .catch((error) => {
         // Handle errors here
