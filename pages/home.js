@@ -1,5 +1,7 @@
 import React, { useRef } from "react";
-import { signOut } from "../firebaseConfig"; // Import your signOut function from firebaseConfig
+import { signOut } from "firebase/auth"; // Import your signOut function from firebaseConfig
+import { useRouter } from "next/router";
+import { auth } from "../firebaseConfig";
 
 const Home = () => {
   const postsRef = useRef(null);
@@ -17,12 +19,13 @@ const Home = () => {
       }
     }
   };
-
+  const router = useRouter();
   // Function to handle sign out
   const handleSignOut = async () => {
     try {
-      await signOut();
+      await signOut(auth);
       console.log("User signed out successfully");
+      router.push("/");
     } catch (error) {
       console.error("Error signing out:", error);
     }

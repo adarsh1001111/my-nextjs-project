@@ -1,5 +1,6 @@
 import { initializeApp } from "firebase/app";
 import { getAuth } from "firebase/auth";
+import { signOut } from "firebase/auth";
 
 export const firebaseConfig = {
   // appId: "YOUR_APP_ID",
@@ -18,4 +19,4 @@ const app = initializeApp(firebaseConfig);
 // Get the authentication service
 const auth = getAuth(app);
 
-export default auth;
+export { auth, signOut };

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
 import { GoogleAuthProvider, signInWithPopup } from "firebase/auth";
-import auth from "../firebaseConfig";
+import { auth } from "../firebaseConfig";
 import { useRouter } from "next/router";
 
 const Signup = () => {
