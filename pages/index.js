@@ -60,6 +60,13 @@ const Signup = () => {
           className="signup-image"
           height="100%"
           width="100%"
+          style={{
+            width: "vw" /* Set the width to fill its container */,
+            height: "vh" /* Set the height to fill its container */,
+            objectFit:
+              "cover" /* Crop the image to cover the entire container */,
+            objectPosition: "center top",
+          }}
         />
       </div>
 
