@@ -78,7 +78,6 @@ const Signup = () => {
                 fontFamily: "Arial, sans-serif",
                 color: "white",
                 display: "inline-block",
-                marginRight: "10px",
               }}
             >
               LO

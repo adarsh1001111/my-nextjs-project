@@ -31,21 +31,27 @@ form {
 
 @media (max-width: 768px) {
   .text-above-form {
+    width: 100%;
+    transform: translateY(-320%);
+
     font-weight: 100;
-    position: relative;
-    top: 20px;
-    margin-top: 200px;
+    position: absolute;
     display: flex;
     justify-content: center;
-    transform: translateX(-200%);
-    text-align: left; /* Align text to the left */
+    text-align: center; /* Align text to the left */
   }
   .signup-container {
     flex-direction: column; /* Reverse the direction of flex items */
     justify-content: flex-start; /* Align items to the start of the container */
   }
 
-  .left-half,
+  .left-half {
+    width: 100%;
+    height: 50vh; /* Set half of the viewport height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
   .right-half {
     width: 100%;
     height: 50vh; /* Set half of the viewport height */
@@ -60,9 +66,9 @@ form {
     height: auto;
   }
   .form-1 {
-    transform: translateY(10%);
   }
   .form-container {
+    transform: translateY(0%);
     max-width: 100%;
     height: 50%;
     display: flex;
@@ -152,20 +158,22 @@ button span {
   margin-top: 10px;
   text-align: center; /* Center the content horizontally */
 }
-.text-above-form {
-  font-weight: 100;
-  transform: translateX(100%);
-  position: absolute;
-  top: 20px; /* Adjust the top position as needed */
-  left: 0;
-  width: 50%;
-  display: flex;
-  justify-content: center;
+@media (min-width: 769px) {
+  .text-above-form {
+    font-weight: 100;
+    transform: translateX(165%);
+    position: absolute;
+    top: 20px; /* Adjust the top position as needed */
+    left: 0;
+    width: 35%;
+    display: flex;
+    justify-content: center;
+  }
 }
 
 /* Adjust the font size and color as needed */
 .text-above-form p {
-  font-size: 18px;
+  font-size: 16px;
   color: #fff; /* Set the text color to white */
 }
 
