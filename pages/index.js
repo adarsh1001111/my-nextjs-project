@@ -55,11 +55,7 @@ const Signup = () => {
       <div className="left-half">
         {/* Picture or image */}
         <img
-          src={
-            isMobileView
-              ? "../19da099d64771f163ae2b0b43b7b18b1.jpg"
-              : "../image2.png"
-          }
+          src={"../image2.png"}
           alt="Signup Image"
           className="signup-image"
           height="100%"
