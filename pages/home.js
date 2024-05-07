@@ -41,6 +41,7 @@ const Home = () => {
         </button>
       </nav>
       <div className="arrow-buttons">
+        <div className="text">Popular Topics 🔥</div>
         <button className="left-button" onClick={() => scroll("left")}>
           <img src="../icons8-back-arrow-32 (1).png" />
         </button>
@@ -48,21 +49,43 @@ const Home = () => {
           <img src="../icons8-back-arrow-32.png" />
         </button>
       </div>
+
       {/* Content */}
       <div className="posts-container" ref={postsRef}>
         <div className="posts">
           {/* First Row */}
-          <div className="post">Post 1</div>
-          <div className="post">Post 2</div>
-          <div className="post">Post 3</div>
-          {/* Second Row */}
-          <div className="post">Post 4</div>
-          <div className="post">Post 5</div>
-          <div className="post">Post 6</div>
-          {/* Third Row */}
-          <div className="post">Post 7</div>
-          <div className="post">Post 8</div>
-          <div className="post">Post 9</div>
+          <div className="post">
+            <p>Lorem ipsum.</p>
+            <button className="read-more">Read More</button>
+          </div>
+          <div className="post">
+            <p>Lorem ipsum.</p>
+            <button className="read-more">Read More</button>
+          </div>
+          <div className="post">
+            <p>Lorem ipsum.</p>
+            <button className="read-more">Read More</button>
+          </div>{" "}
+          <div className="post">
+            <p>Lorem ipsum.</p>
+            <button className="read-more">Read More</button>
+          </div>{" "}
+          <div className="post">
+            <p>Lorem ipsum.</p>
+            <button className="read-more">Read More</button>
+          </div>{" "}
+          <div className="post">
+            <p>Lorem ipsum.</p>
+            <button className="read-more">Read More</button>
+          </div>{" "}
+          <div className="post">
+            <p>Lorem ipsum.</p>
+            <button className="read-more">Read More</button>
+          </div>{" "}
+          <div className="post">
+            <p>Lorem ipsum.</p>
+            <button className="read-more">Read More</button>
+          </div>
         </div>
       </div>
     </div>
