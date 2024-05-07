@@ -13,12 +13,17 @@ const Home = () => {
   };
 
   return (
-    <div>
+    <div className="outerdiv">
       {/* Navbar */}
       <nav>
-        <div className="logo">LOGO</div>
-        <div className="sign-out" onClick={handleSignOut}>
-          Sign Out
+        <div className="navbar">
+          <div className="logo">
+            LO
+            <span>GO</span>
+          </div>
+          <button className="signout-button" onClick={handleSignOut}>
+            Sign Out
+          </button>
         </div>
       </nav>
 
