@@ -44,6 +44,7 @@ const Signup = () => {
     try {
       const auth = getAuth();
       await createUserWithEmailAndPassword(auth, email, password);
+      router.push(`/home`);
     } catch (error) {
       // Handle errors here
       console.error(error);
