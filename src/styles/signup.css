@@ -194,26 +194,28 @@ button span {
   /* Thin border with light color */
 }
 
-/* Add this CSS to your stylesheet */
-.navbar {
-  display: flex;
-  justify-content: space-between; /* Align children with space between them */
-  align-items: center; /* Vertically center children */
-  background-color: #031d38;
-}
 body {
   background-color: #071829;
 }
+.navbar {
+  display: flex;
+  justify-content: space-between; /* Push the logo to the left and the sign-out button to the right */
+  align-items: center;
+  background-color: #031d38;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 10px 20px;
+}
+
 .logo {
-  padding-left: 10px;
   font-family: Arial;
   font-weight: bold;
   color: rgb(255, 255, 255);
 }
+
 .logo span {
   background-color: rgb(2, 172, 238);
-  border-radius: 10px; /* Adjust the value to change the curve radius */
-  padding: 5px 5px; /* Add some padding to make it visually appealing */
+  padding: 5px;
+  border-radius: 5px;
 }
 
 .signout-button {
@@ -221,5 +223,59 @@ body {
   border: none;
   color: rgba(80, 205, 255, 0.839);
   cursor: pointer;
-  margin-left: 1080px;
+  width: auto; /* Set width to auto */
+  padding: 5px 10px; /* Adjust padding */
+  margin-left: auto; /* Move the button to the right */
+  margin-right: 15px; /* Add some margin for spacing */
+}
+
+.posts-container {
+  overflow-x: auto;
+  white-space: nowrap;
+}
+
+.posts {
+  display: inline-flex; /* Display posts in a row */
+}
+
+.post {
+  width: 200px; /* Adjust the width as needed */
+  height: 150px; /* Adjust the height as needed */
+  background-color: #f0f0f0; /* Example background color */
+  margin-right: 10px; /* Add margin between posts */
+}
+
+.arrow-buttons {
+  display: flex;
+  align-items: center;
+}
+
+.arrow-buttons button {
+  width: 10px;
+  background-color: transparent;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  color: #fff;
+  width: 40px; /* Limit button width */
+  align-items: right;
+}
+.arrow-buttons .left-button {
+  margin-left: auto;
+}
+.posts-container {
+  overflow-x: auto;
+  white-space: nowrap;
+  margin-top: 50px; /* Ensure content doesn't overlap with buttons */
+}
+
+.posts {
+  display: inline-flex; /* Display posts in a row */
+}
+
+.post {
+  width: 200px; /* Adjust the width as needed */
+  height: 150px; /* Adjust the height as needed */
+  background-color: #f0f0f0; /* Example background color */
+  margin-right: 10px; /* Add margin between posts */
 }

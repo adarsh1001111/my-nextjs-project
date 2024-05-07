@@ -63,7 +63,17 @@ const Signup = () => {
               }}
             >
               LO
-              <span style={{ backgroundColor: "rgb(135, 206, 250)" }}>GO</span>
+              <span
+                style={{
+                  backgroundColor: "rgb(2, 172, 238)",
+                  borderRadius:
+                    "10px" /* Adjust the value to change the curve radius */,
+                  padding:
+                    " 5px 5px " /* Add some padding to make it visually appealing */,
+                }}
+              >
+                GO
+              </span>
             </div>
             <p>Journey to a trillion miles starts from here.</p>
           </div>
