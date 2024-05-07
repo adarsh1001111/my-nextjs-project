@@ -3,12 +3,27 @@ import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
 import { GoogleAuthProvider, signInWithPopup } from "firebase/auth";
 import { auth } from "../firebaseConfig";
 import { useRouter } from "next/router";
+import { useEffect } from "react";
 
 const Signup = () => {
   const router = useRouter();
   const [showEmailInputs, setShowEmailInputs] = useState(false);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [isMobileView, setIsMobileView] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobileView(window.innerWidth < 768);
+    };
+
+    handleResize(); // Initial check
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
 
   const signInWithGoogle = () => {
     const provider = new GoogleAuthProvider();
@@ -40,7 +55,11 @@ const Signup = () => {
       <div className="left-half">
         {/* Picture or image */}
         <img
-          src="../image2.png"
+          src={
+            isMobileView
+              ? "../19da099d64771f163ae2b0b43b7b18b1.jpg"
+              : "../image2.png"
+          }
           alt="Signup Image"
           className="signup-image"
           height="100%"
@@ -80,7 +99,7 @@ const Signup = () => {
         </div>
         {/* Signup form */}
         <div className="form-container">
-          <form>
+          <form className="form-1">
             <h2>Sign up</h2>
             <h2>Choose a sign up method</h2>
             {/* Button for Google sign-in */}
